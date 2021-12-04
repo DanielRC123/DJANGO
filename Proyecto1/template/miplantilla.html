@@ -2,6 +2,23 @@
 <html lang="en">
 
 <body>
+    <main>
+        <div>
+            <section>
+                <form action="./." method="get">
+                    <label for="nombre">Name</label>
+                    <input type="" required="" placeholder="NAME" id="nombre">
+                    <label for="contraseña">password</label>
+                    <input type="password" required="" placeholder="PASSWORD" id="contraseña">
+                    <label for="tel"></label>
+                    <input type="number" required="" placeholder="TEL" id="tel">
+                    <label for="enviar"></label>
+                    <input type="submit" required="" placeholder="SEND" id="enviar">
+
+                </form>
+            </section>
+        </div>
+    </main>
     <h2>
         Esta es la nueva plantilla 
     </h2>
@@ -9,7 +26,19 @@
         El nombre de la persona es : {{Nombre_persona}} {{Apellido_persona}}
     </p>
     <p>
-        Estamos estudiando el dia{{Fecha}}
+        Estamos estudiando el dia {{Fecha.day}} /{{Fecha.month}}/ {{Fecha.year}}
     </p>
+    <p>
+        <strong>Temas a estudiar</strong>
+    </p>
+    <p>
+        <ul>
+            {% for i in temas %}
+                <li> {{i}}</li>
+            {% endfor %}
+        </ul>
+    </p>
+
+    
 </body>
 </html>
